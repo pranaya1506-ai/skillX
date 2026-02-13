@@ -1,16 +1,11 @@
-#
-# Copyright (C) 2009-2020 the sqlparse authors and contributors
-# <see AUTHORS file>
-#
-# This module is part of python-sqlparse and is released under
-# the BSD License: https://opensource.org/licenses/BSD-3-Clause
+# SPDX-License-Identifier: MIT
+# SPDX-FileCopyrightText: 2021 Taneli Hukkinen
+# Licensed to PSF under a Contributor Agreement.
 
-from sqlparse.engine import grouping
-from sqlparse.engine.filter_stack import FilterStack
-from sqlparse.engine.statement_splitter import StatementSplitter
+__all__ = ("loads", "load", "TOMLDecodeError")
+__version__ = "2.0.1"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILITY DO IT
 
-__all__ = [
-    'grouping',
-    'FilterStack',
-    'StatementSplitter',
-]
+from ._parser import TOMLDecodeError, load, loads
+
+# Pretend this exception was created here.
+TOMLDecodeError.__module__ = __name__
